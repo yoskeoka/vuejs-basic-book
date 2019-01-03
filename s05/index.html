@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Vue.js App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ message }}</h1>
+      <ol>
+        <li v-for="item in list">{{ item }}</li>
+      </ol>
+      <button v-on:click="handleClick">イベントの中身を出すボタンだよ</button>
+      <input v-model="message" />
+      <button v-on:click="showMessage=!showMessage">表示切り替え</button>
+      <transition >
+        <p class="msg" v-if="showMessage">{{ message }}</p>
+      </transition>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
