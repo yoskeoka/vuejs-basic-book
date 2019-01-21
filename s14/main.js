@@ -1,7 +1,16 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'hello world!',
-    val: [],
+    width: 800,
+  },
+  computed: {
+    halfWidth: {
+      get() {
+        return this.width / 2;
+      },
+      set(val) {
+        this.width = val * 2;
+      },
+    },
   },
 });

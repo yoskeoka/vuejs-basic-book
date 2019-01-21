@@ -9,13 +9,8 @@
   </head>
   <body>
     <div id="app">
-      <input v-model="message">
-      <p>{{ message }}</p>
-      <label><input type="checkbox" v-model="val" value="A"> A</label>
-      <label><input type="checkbox" v-model="val" value="B"> B</label>
-      <label><input type="checkbox" v-model="val" value="C"> C</label>
-      <p>{{ val }}</p>
-
+      <p>{{ width }} の半分は {{ halfWidth }}</p>
+      <input type="text" v-model.number="halfWidth" />
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="main.js"></script>
